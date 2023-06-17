@@ -8,6 +8,7 @@ import java.io.ObjectOutputStream;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import com.masai.entities.Broker;
 import com.masai.entities.Trader;
 
 public class FileExists {
@@ -35,6 +36,41 @@ public class FileExists {
 				
 				ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f));
 				cFile = (Map<String, Trader>) ois.readObject();
+
+				return cFile;
+
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+		return cFile;
+
+	}
+	public static Map<String, Broker> brokerFile() {
+
+		Map<String, Broker> cFile = null;
+
+		File f = new File("Broker.ser");
+		boolean flag = false;
+		try {
+			if (!f.exists()) {
+				f.createNewFile();
+				flag = true;
+			}
+
+			if (flag) {
+				
+				cFile = new LinkedHashMap<>();
+				ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(f));
+				oos.writeObject(cFile);
+				return cFile;
+
+			} else {
+				
+				ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f));
+				cFile = (Map<String, Broker>) ois.readObject();
 
 				return cFile;
 
