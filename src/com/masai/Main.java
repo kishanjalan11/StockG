@@ -39,7 +39,7 @@ public class Main {
 		System.out.println("Enter the password");
 		String pass = sc.next();
 		System.out.println("Enter the address");
-		String address = sc.next();
+		String address = sc.next(); 	
 		System.out.println("Enter the email id");
 		String email = sc.next();
 		System.out.println("Enter the balance to be added into the wallet");
