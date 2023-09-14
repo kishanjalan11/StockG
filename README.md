@@ -1,4 +1,7 @@
-## StockG - Navigating the Financial Markets
+<h2 align="center"> StockG - Navigating the Financial Markets </h2>
+<p align="center">
+<img src="https://github.com/kishanjalan11/StockG/assets/41429552/b6392a71-0777-43fa-9b5b-4865a2f37788"  border="10"/>
+</p>
 
 StockG is a comprehensive trading platform aimed at empowering investors and traders to buy and sell stocks with simplicity and accuracy. Inspired by successful platforms like Zerodha, this project's goal is to create a seamless and interactive platform to browse market trends, perform transactions, and track portfolio performance.
 
